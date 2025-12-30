@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #2E5339;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 70px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.dot {
+  color: #1B3D2F;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #CBB48A;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  background: #DFF5E0;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.title {
+  color: #1B3D2F;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  color: #CBB48A;
+  margin: 10px 0 20px;
+}
+
+.desc {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.hero-img img {
+  max-width: 500px;
+}
+
+/* ABOUT / MISSION / VISION */
+.about-section {
+  background: #ffffff;
+  padding: 70px 80px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 40px;
+  color: #1B3D2F;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.mv-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.mv-box {
+  flex: 1;
+  background: #DFF5E0;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.mv-box h3 {
+  color: #1B3D2F;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.mv-box p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 14px;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 50px;
+  }
+
+  .hero-img img {
+    margin-top: 40px;
+    max-width: 300px;
+  }
+
+  .mv-container {
+    flex-direction: column;
+  }
+
+  nav {
+    display: none;
+  }
+}

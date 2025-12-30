@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Pinggang Pinoy – Health Profile</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@400;600&family=Playfair+Display:wght@500;700&family=Ultra&family=Cormorant+Garamond:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/h-style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="brand">
+            <img src="images/logo.png" alt="Pinggang Pinoy Logo" class="brand-logo">
+            <span class="brand-name">Pinggang Pinoy</span>
+        </div>
+
+        <div class="welcome-text">Welcome, Name!</div>
+
+        <a href="#" class="nav-link">Homepage</a>
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <ul>
+                <li><a href="ACCOUNTS.html">Account Profile</a></li>
+                <li class="active"><a href="HEALTH PROFILE.html">Health Profile</a></li>
+                <li><a href="NUTRITION PLAN.html">Nutrition Plan</a></li>
+                <li><a href="ORDER HISTORY.html">Order History</a></li>
+                <hr>
+                <li class="logout"><a href="index.html">Log Out</a></li>
+            </ul>
+
+            <!-- Help & Support -->
+            <div class="sidebar-help">
+                <h3>Help & Support</h3>
+
+                <div class="help-item">
+                    <span class="help-icon">☏</span>
+                    <div class="help-text">
+                        <small>Call Us</small>
+                        <a href="tel:+639XXXXXXXXX">+63 9XX XXX XXXX</a>
+                    </div>
+                </div>
+
+                <div class="help-item">
+                    <span class="help-icon">✉</span>
+                    <div class="help-text">
+                        <small>Email Us</small>
+                        <a href="mailto:pinggangpinoy_support@gmail.com">
+                            pinggangpinoy_support@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT (CENTERED) -->
+        <main class="main-content">
+
+            <div class="health-profile-card">
+
+                <h2 class="section-title">Health Profile</h2>
+
+                <!-- Nutrient Diet Type -->
+                <section class="profile-section">
+                    <h3>Nutrient Diet Type</h3>
+
+                    <div class="diet-grid">
+                        <label class="diet-card">
+                            <input type="radio" name="nutrient_diet">
+                            <div class="diet-content">
+                                <h4>Protein-Based</h4>
+                                <p>High protein focused meals</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                        </label>
+
+                        <label class="diet-card">
+                            <input type="radio" name="nutrient_diet">
+                            <div class="diet-content">
+                                <h4>Carb-Based</h4>
+                                <p>Energy-rich carbohydrate meals</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                        </label>
+
+                        <label class="diet-card">
+                            <input type="radio" name="nutrient_diet">
+                            <div class="diet-content">
+                                <h4>Fiber-Based</h4>
+                                <p>Digestive-friendly foods</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                        </label>
+
+                        <label class="diet-card">
+                            <input type="radio" name="nutrient_diet" checked>
+                            <div class="diet-content">
+                                <h4>Heart-Healthy</h4>
+                                <p>Low sodium, healthy fats</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Dietary Type -->
+                <section class="profile-section">
+                    <h3>Dietary Type</h3>
+
+                    <div class="diet-grid">
+                        <label class="diet-card">
+                            <input type="radio" name="dietary_type">
+                            <div class="diet-content">
+                                <h4>Balanced Filipino</h4>
+                                <p>Traditional meals with proper portions</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                        </label>
+
+                        <label class="diet-card">
+                            <input type="radio" name="dietary_type">
+                            <div class="diet-content">
+                                <h4>Ketogenic</h4>
+                                <p>Low-carb, high-fat meals</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                        </label>
+
+                        <label class="diet-card">
+                            <input type="radio" name="dietary_type">
+                            <div class="diet-content">
+                                <h4>Low-Carb High-Protein</h4>
+                                <p>Reduced carbs, protein-focused</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                        </label>
+
+                        <label class="diet-card">
+                            <input type="radio" name="dietary_type">
+                            <div class="diet-content">
+                                <h4>Pescatarian</h4>
+                                <p>Fish and seafood based</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                        </label>
+
+                        <label class="diet-card">
+                            <input type="radio" name="dietary_type">
+                            <div class="diet-content">
+                                <h4>Diabetic-Friendly</h4>
+                                <p>Blood sugar conscious meals</p>
+                            </div>
+                            <span class="checkmark">✓</span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Allergies -->
+                <section class="profile-section">
+                    <h3>Allergies & Restrictions</h3>
+
+                    <div class="allergy-pill-group">
+                        <label class="allergy-pill"><input type="checkbox"><span>Shellfish</span></label>
+                        <label class="allergy-pill"><input type="checkbox"><span>Peanuts</span></label>
+                        <label class="allergy-pill"><input type="checkbox"><span>Tree Nuts</span></label>
+                        <label class="allergy-pill"><input type="checkbox"><span>Dairy</span></label>
+                        <label class="allergy-pill"><input type="checkbox"><span>Eggs</span></label>
+                        <label class="allergy-pill"><input type="checkbox"><span>Soy</span></label>
+                        <label class="allergy-pill"><input type="checkbox"><span>Gluten</span></label>
+                        <label class="allergy-pill"><input type="checkbox"><span>Fish</span></label>
+                    </div>
+                </section>
+
+                <!-- SAVE BUTTON -->
+                <div class="save-section">
+                    <button class="save-btn">Save Changes</button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

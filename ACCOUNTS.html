@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Pinggang Pinoy – Account Profile</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@400;600&family=Playfair+Display:wght@500;700&family=Ultra&family=Cormorant+Garamond:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="brand">
+            <img src="images/logo.png" alt="Pinggang Pinoy Logo" class="brand-logo">
+            <span class="brand-name">Pinggang Pinoy</span>
+        </div>
+
+        <div class="welcome-text">Welcome, Name!</div>
+
+        <a href="#" class="nav-link">Homepage</a>
+    </div>
+
+    <!-- MAIN -->
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <ul class="sidebar-menu">
+                <li class="active"><a href="ACCOUNTS.html">Account Profile</a></li>
+                <li><a href="HEALTH PROFILE.html">Health Profile</a></li>
+                <li><a href="NUTRITION PLAN.html">Nutrition Plan</a></li>
+                <li><a href="ORDER HISTORY.html">Order History</a></li>
+                <hr>
+                <li class="logout"><a href="index.html">Log Out</a></li>
+            </ul>
+
+            <!-- Help & Support -->
+            <div class="sidebar-help">
+                <h3>Help & Support</h3>
+
+                <div class="help-item">
+                    <span class="help-icon">☏</span>
+                    <div class="help-text">
+                        <small>Call Us</small>
+                        <a href="tel:+639XXXXXXXXX">+63 9XX XXX XXXX</a>
+                    </div>
+                </div>
+
+                <div class="help-item">
+                    <span class="help-icon">✉</span>
+                    <div class="help-text">
+                        <small>Email Us</small>
+                        <a href="mailto:pinggangpinoy_support@gmail.com">
+                            pinggangpinoy_support@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- CONTENT -->
+        <main class="content">
+            <div class="card profile-layout">
+
+                <!-- LEFT -->
+                <div class="profile-info">
+
+                    <!-- HEADER WITH EDIT BUTTON -->
+                    <div class="profile-header">
+                        <h2>Personal Information</h2>
+                        <button class="edit-btn floating-edit">Edit Profile</button>
+                    </div>
+
+                    <div class="info-grid">
+                        <div>
+                            <label>First Name</label>
+                            <input type="text" placeholder="Juan">
+                        </div>
+
+                        <div>
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Dela Cruz">
+                        </div>
+
+                        <div>
+                            <label>Email</label>
+                            <input type="email" placeholder="juan@email.com">
+                        </div>
+
+                        <div>
+                            <label>Phone Number</label>
+                            <input type="text" placeholder="+63 9XX XXX XXXX">
+                        </div>
+
+                        <div>
+                            <label>Gender</label>
+                            <select>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Prefer not to say</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <h3>Addresses</h3>
+                    <div class="address-list">
+                        <div class="address-card">
+                            <strong>Home</strong>
+                            <p>Calamba City, Laguna</p>
+                            <button>Edit</button>
+                        </div>
+
+                        <div class="address-card">
+                            <strong>Work</strong>
+                            <p>Makati City</p>
+                            <button>Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="profile-card">
+                    <img src="images/profile-picture.jpg" alt="Profile Picture" class="profile-pic-lg">
+                    <h3>Account Profile</h3>
+
+                    <!-- PAYMENT METHODS -->
+                    <div class="payment-section">
+                        <div class="payment-header">
+                            <h4>Payment Methods</h4>
+                            <button class="add-payment">＋</button>
+                        </div>
+
+                        <!-- Card -->
+                        <div class="payment-card default">
+                            <div class="payment-left">
+                                <div class="payment-icon">💳</div>
+                                <div>
+                                    <strong>Visa ending in 4242</strong>
+                                    <small>Expires 12/26</small>
+                                </div>
+                            </div>
+                            <span class="badge">Default</span>
+                        </div>
+
+                        <!-- GCash -->
+                        <div class="payment-card">
+                            <div class="payment-left">
+                                <div class="payment-icon">📱</div>
+                                <div>
+                                    <strong>GCash</strong>
+                                    <small>+63 917 *** 4567</small>
+                                </div>
+                            </div>
+                            <button class="set-default">Set</button>
+                        </div>
+
+                        <!-- Maya -->
+                        <div class="payment-card">
+                            <div class="payment-left">
+                                <div class="payment-icon">👛</div>
+                                <div>
+                                    <strong>Maya</strong>
+                                    <small>+63 917 *** 4567</small>
+                                </div>
+                            </div>
+                            <button class="set-default">Set</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

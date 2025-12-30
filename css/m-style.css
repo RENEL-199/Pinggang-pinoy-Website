@@ -1,0 +1,402 @@
+
+/* =======================
+   MENU ADJUSTMENTS
+======================= */
+
+html {
+    scroll-behavior: smooth;
+}
+h2[id] {
+    scroll-margin-top: 120px; /* match navbar height */
+}
+
+aside {
+    margin: 20px;
+    width: 220px;
+    border-radius: 20px;
+    background-color: var(--nav-text);
+    box-shadow: 0 4px 6px rgba(0.9, 0.9, 0.9, 0.9);
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    position: sticky;
+    top: 130px; 
+    align-self: flex-start;
+}
+
+
+.menu-sidebar h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Ultra', serif;
+    color: var(--dark-green);
+}
+
+.menu-sidebar {
+    padding: 10%;
+    width: 20%;
+    background-color: var(--buttons);
+    padding: 30px 20px;
+    color: var(---dark-green);
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-sidebar ul {
+    list-style: none;
+}
+
+.menu-sidebar li {
+    margin-bottom: 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+
+}
+
+.menu-sidebar li a {
+    display: block;
+    padding: 5px 15px;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu-sidebar li:hover{
+    background-color: var(--accent);
+    color: var(--white);
+}
+.menu-sidebar li.active {
+    border: 2px solid #1B3D2F;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: #2E5339;
+    color: var(--nav-text);
+    transition: all 0.3s ease;
+}
+
+/* Plan Header Layout */
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--nav-green);
+    padding-bottom: 15px;
+}
+
+.plan-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--nav-green);
+}
+
+/* Description Text */
+.plan-description {
+    margin-bottom: 20px !important;
+    font-size: 15px;
+}
+
+/* Grid for the 4 Meals */
+.plan-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.mini-meal-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 12px;
+    background: #fafafa;
+}
+
+.mini-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.mini-info h4 {
+    font-size: 14px;
+    margin: 0;
+    color: var(--nav-green);
+    font-family: 'Poppins', sans-serif;
+}
+
+.mini-info span {
+    font-size: 11px;
+    color: #666;
+    display: block;
+}
+
+/* Footer & Pricing */
+.plan-footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 15px;
+    border-top: 1px dashed var(--accent);
+}
+
+.plan-meta {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--dark-green);
+}
+
+.price-label {
+    font-size: 14px;
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price-amount {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--nav-green);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =======================
+   COLOR VARIABLES
+======================= */
+:root {
+    --body-green: #DFF5E0;
+    --nav-green: #1B3D2F;
+    --nav-text: #EAD9B7;
+    --accent: #CBB48A;
+    --dark-green: #2E5339;
+    --white: #ffffff;
+    --buttons: rgba(255, 255, 255, 0.65);
+}
+
+/* =======================
+   GLOBAL RESET
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: var(--body-green);
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-green);
+    min-height: 100vh;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+.navbar {
+    background-color: var(--nav-green);
+    color: var(--nav-text);
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    
+    /* Sticky Properties */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps the navbar above images and cards */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Optional: adds depth when scrolling */
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-family: 'Ultra', serif;
+    font-size: 22px;
+}
+
+.welcome-text {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: var(--nav-text);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* =======================
+   LAYOUT
+======================= */
+.container {
+    display: flex; /* sidebar + main content */
+    gap: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column; /* stack food containers */
+    flex: 1; /* take remaining width */
+    gap: 20px;
+}
+
+
+.card {
+    width: 100%;
+    max-width: none;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    font-family: Arial, sans-serif;
+    margin: 10px;
+}
+
+.info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+.food-container {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    min-width: 0;
+}
+
+
+.card-img {
+    max-width: 360px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+p {
+    background-color: #F5E9D3;
+  padding: 25px;
+  border-left: 4px solid #2E5339;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+  color: #2E5339;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.card-img {
+    width: 250px;       /* smaller so text fits beside */
+    height: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.card-info {
+    text-align: left;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--dark-green);
+}
+.price-cart {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--nav-green);
+}
+
+/* Cart-style checkbox */
+.cart-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--dark-green);
+}
+
+.cart-check input {
+    display: none;
+}
+
+.cart-check .checkmark {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--nav-green);
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.cart-check input:checked + .checkmark {
+    background-color: var(--nav-green);
+}
+
+.cart-check input:checked + .checkmark::after {
+    content: "✓";
+    color: var(--nav-text);
+    font-size: 14px;
+    font-weight: bold;
+}
