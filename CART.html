@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Your Cart — Pinggang Pinoy</title>
@@ -15,6 +16,7 @@
             cursor: pointer;
             font-weight: bold;
         }
+
         .remove-btn {
             padding: 6px 12px;
             background: #b22;
@@ -29,30 +31,30 @@
 
 <body>
 
-        <!-- NAVBAR -->
+    <!-- NAVBAR -->
     <div class="banner">
 
-    <!-- ✅ NAVBAR (NO <center>) -->
-    <div class="navbar">
-      <div class="brand">
-        <img src="images/logo.png" alt="Logo" class="nav-logo">
-        <span class="nav-text">Pinggang Pinoy</span>
-      </div>
+        <!-- ✅ NAVBAR (NO <center>) -->
+        <div class="navbar">
+            <div class="brand">
+                <img src="images/logo.png" alt="Logo" class="nav-logo">
+                <span class="nav-text">Pinggang Pinoy</span>
+            </div>
 
-      <div class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="cart.html">Cart</a>
-        <a href="ACCOUNTS.html">Account</a>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="CART.html">Cart</a>
+                <a href="ACCOUNTS.html">Account</a>
 
-      </div>
-    </div>
-   
-<div class="banner-text">
-           Cart
+            </div>
         </div>
 
-  </div>
+        <div class="banner-text">
+            Cart
+        </div>
+
+    </div>
 
     <!-- CART CONTENT -->
     <div class="container">
@@ -65,11 +67,10 @@
             <div class="card" style="margin-top:20px;">
                 <h3>Order Summary</h3>
                 <p id="total-text"
-                   style="background:none; box-shadow:none; border:none; padding:5px 0; color:var(--dark-green)">
+                    style="background:none; box-shadow:none; border:none; padding:5px 0; color:var(--dark-green)">
                     Total: ₱0.00
                 </p>
-                <button id="checkout-btn"
-                    style="font-size:18px;background:var(--nav-green);color:var(--nav-text);
+                <button id="checkout-btn" style="font-size:18px;background:var(--nav-green);color:var(--nav-text);
                     padding:12px 25px;border:none;border-radius:12px;cursor:pointer;text-align:center;">
                     Checkout
                 </button>
@@ -79,35 +80,42 @@
                 <h3>Checkout Details</h3>
                 <form id="checkout-form-element">
                     <label for="name">Name:</label><br>
-                    <input type="text" id="name" required style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
-                    
+                    <input type="text" id="name" required
+                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+
                     <label for="phone">Phone Number:</label><br>
-                    <input type="tel" id="phone" required style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
-                    
+                    <input type="tel" id="phone" required
+                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+
                     <label for="block_lot">Block and Lot:</label><br>
-                    <input type="text" id="block_lot" style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
-                    
+                    <input type="text" id="block_lot"
+                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+
                     <label for="street">Street:</label><br>
-                    <input type="text" id="street" style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
-                    
+                    <input type="text" id="street"
+                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+
                     <label for="barangay">Barangay:</label><br>
-                    <input type="text" id="barangay" style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
-                    
+                    <input type="text" id="barangay"
+                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+
                     <label for="city">City:</label><br>
                     <input type="text" id="city" style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
-                    
+
                     <label for="province">Province:</label><br>
-                    <input type="text" id="province" style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
-                    
+                    <input type="text" id="province"
+                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+
                     <label for="zip">ZIP Code:</label><br>
                     <input type="text" id="zip" style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
-                    
+
                     <label for="payment">Payment Method:</label><br>
                     <select id="payment" required style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;">
                         <option value="cash">Cash on Delivery</option>
                     </select><br>
-                    
-                    <button type="submit" style="font-size:18px;background:var(--nav-green);color:var(--nav-text);
+
+                    <button type="submit"
+                        style="font-size:18px;background:var(--nav-green);color:var(--nav-text);
                         padding:12px 25px;border:none;border-radius:12px;cursor:pointer;text-align:center; margin-top:10px;">
                         Complete Order
                     </button>
@@ -120,4 +128,5 @@
     <script src="js/cart.js"></script>
 
 </body>
+
 </html>
