@@ -1,0 +1,231 @@
+/* =======================
+   CART PAGE STYLE ONLY
+======================= */
+
+:root {
+    --body-green: #DFF5E0;
+    --nav-green: #1B3D2F;
+    --nav-text: #EAD9B7;
+    --accent: #CBB48A;
+    --dark-green: #2E5339;
+    --white: #ffffff;
+    --buttons: rgba(255, 255, 255, 0.65);
+}
+
+/* Page background */
+body {
+    background-color: var(--body-green);
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-green);
+}
+
+/* Container for cart page - make it narrower and centered */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+/* ========================
+   BANNER
+======================== */
+.banner {
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
+  position: relative;
+  background: linear-gradient(90deg, #2B4D3E, #2E5339);
+  color: #EAD9B7;
+  padding: 20px 100px;
+  height: 170px;
+  animation: fadeIn 1s ease;
+}
+
+.banner-text {
+  position: absolute;
+ 
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #EAD9B7;
+}
+
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 93%;
+  z-index: 1000;
+  background: #1B3D2F;
+  padding: 10px 20px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-logo {
+  height: 60px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.nav-text {
+  color: #EAD9B7;
+  font-family:'Playfair Display', serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-links a:hover {
+  color: #EAD9B7;
+  border-bottom: 2px solid #EAD9B7;
+}
+
+
+/* Cart item cards */
+#cart-items .cart-card {
+    width: 100%;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Item titles */
+#cart-items .item-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark-green);
+    margin-bottom: 6px;
+}
+
+/* Price text */
+#cart-items .item-price {
+    color: var(--nav-green);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* Buttons */
+.qty-btn {
+    background: var(--buttons);
+    color: var(--nav-green);
+    border: 2px solid var(--nav-green);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s ease;
+    padding: 6px 14px;
+}
+.qty-btn:hover {
+    transform: scale(1.1);
+    background: var(--accent);
+}
+
+.remove-btn {
+    background: #b22;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+}
+.remove-btn:hover {
+    background: #911;
+}
+
+/* Order summary */
+#cart-summary {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+}
+
+#cart-summary h3 {
+    font-size: 22px;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 10px;
+}
+
+#total-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--nav-green);
+}
+
+/* Checkout Button */
+#checkout-btn {
+    background: var(--nav-green);
+    color: var(--nav-text);
+    padding: 12px 25px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+#checkout-btn:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--nav-green);
+    color: var(--nav-text);
+    padding: 12px 18px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateX(120%);
+    transition: 0.4s ease;
+    font-weight: 600;
+    z-index: 9999;
+}
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}

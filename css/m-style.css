@@ -208,54 +208,92 @@ h3 {
     font-family: 'Cormorant Garamond', serif;
 }
 
-/* =======================
-   NAVBAR
-======================= */
+
+
+/* ========================
+   BANNER
+======================== */
+.banner {
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
+  position: relative;
+  background: linear-gradient(90deg, #2B4D3E, #2E5339);
+  color: #EAD9B7;
+  padding: 20px 100px;
+  height: 130px;
+  animation: fadeIn 1s ease;
+}
+
+.banner-text {
+  position: absolute;
+ 
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #EAD9B7;
+}
+
+
+/* Navbar */
 .navbar {
-    background-color: var(--nav-green);
-    color: var(--nav-text);
-    padding: 10px 20px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    
-    /* Sticky Properties */
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Keeps the navbar above images and cards */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Optional: adds depth when scrolling */
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 93%;
+  z-index: 1000;
+  background: #1B3D2F;
+  padding: 10px 20px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.brand-logo {
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
+.nav-logo {
+  height: 60px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
-.brand-name {
-    font-family: 'Ultra', serif;
-    font-size: 22px;
+.nav-text {
+  color: #EAD9B7;
+  font-family:'Playfair Display', serif;
+  font-size: 25px;
+  letter-spacing: 1px;
 }
 
-.welcome-text {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
+.nav-links {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
-.nav-link {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    color: var(--nav-text);
-    text-decoration: underline;
-    text-underline-offset: 6px;
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  transition: color 0.3s, border-bottom 0.3s;
 }
+
+.nav-links a:hover {
+  color: #EAD9B7;
+  border-bottom: 2px solid #EAD9B7;
+}
+
 
 /* =======================
    LAYOUT
