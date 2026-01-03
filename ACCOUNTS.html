@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinggang Pinoy – Account Profile</title>
 
     <!-- Google Fonts -->
@@ -15,30 +16,30 @@
 
 <body>
 
-     <!-- NAVBAR -->
-    <div class="banner">
-
-    <!-- ✅ NAVBAR (NO <center>) -->
+    <!-- NAVBAR -->
     <div class="navbar">
-      <div class="brand">
-        <img src="images/logo.png" alt="Logo" class="nav-logo">
-        <span class="nav-text">Pinggang Pinoy</span>
-      </div>
-
-      <div class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="CART.html">Cart</a>
-        <a href="ACCOUNTS.html">Account</a>
-
-      </div>
-    </div>
-   
-<div class="banner-text">
-           Account
+        <div class="brand">
+            <img src="images/logo.png" alt="Pinggang Pinoy Logo" class="nav-logo">
+            <span class="nav-text">Pinggang Pinoy</span>
         </div>
 
-  </div>
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="welcome-text">Welcome, Name!</div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="CART.html">Cart</a>
+            <a href="ACCOUNTS.html">Account</a>
+        </div>
+    </div>
+
     <!-- MAIN -->
     <div class="container">
 
@@ -51,7 +52,7 @@
                 <li><a href="NUTRITION PLAN.html">Nutrition Plan</a></li>
                 <li><a href="ORDER HISTORY.html">Order History</a></li>
                 <hr>
-                <li class="logout"><a href="index.html">Log Out</a></li>
+                <li class="logout"><a href="signup.html">Log Out</a></li>
             </ul>
 
             <!-- Help & Support -->
@@ -78,6 +79,14 @@
             </div>
 
         </aside>
+
+        <!-- Mobile Navigation Bar -->
+        <div class="mobile-nav-bar">
+            <a href="ACCOUNTS.html" class="active">Account</a>
+            <a href="HEALTH PROFILE.html">Health Profile</a>
+            <a href="NUTRITION PLAN.html">Nutrition Plan</a>
+            <a href="ORDER HISTORY.html">Order History</a>
+        </div>
 
         <!-- CONTENT -->
         <main class="content">
@@ -193,6 +202,13 @@
             </div>
         </main>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
 </body>
 

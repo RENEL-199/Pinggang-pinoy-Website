@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinggang Pinoy – Order History</title>
 
     <!-- Google Fonts -->
@@ -14,176 +16,190 @@
 
 <body>
 
-<!-- NAVBAR -->
-    <div class="banner">
-
-        <!-- ✅ NAVBAR (NO <center>) -->
-        <div class="navbar">
-            <div class="brand">
-                <img src="images/logo.png" alt="Logo" class="nav-logo">
-                <span class="nav-text">Pinggang Pinoy</span>
-            </div>
-
-            <div class="nav-links">
-                <a href="home.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="CART.html">Cart</a>
-                <a href="ACCOUNTS.html">Account</a>
-
-            </div>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="brand">
+            <img src="images/logo.png" alt="Pinggang Pinoy Logo" class="nav-logo">
+            <span class="nav-text">Pinggang Pinoy</span>
         </div>
 
-        <div class="banner-text">
-            Order History
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
 
+        <div class="welcome-text">Welcome, Name!</div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="CART.html">Cart</a>
+            <a href="ACCOUNTS.html">Account</a>
+        </div>
     </div>
 
-<!-- MAIN LAYOUT -->
-<div class="container">
+    <!-- MAIN LAYOUT -->
+    <div class="container">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <ul>
-            <li><a href="ACCOUNTS.html">Account Profile</a></li>
-            <li><a href="HEALTH PROFILE.html">Health Profile</a></li>
-            <li><a href="NUTRITION PLAN.html">Nutrition Plan</a></li>
-            <li class="active"><a href="ORDER HISTORY.html">Order History</a></li>
-            <hr>
-            <li class="logout"><a href="index.html">Log Out</a></li>
-        </ul>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="ACCOUNTS.html">Account Profile</a></li>
+                <li><a href="HEALTH PROFILE.html">Health Profile</a></li>
+                <li><a href="NUTRITION PLAN.html">Nutrition Plan</a></li>
+                <li class="active"><a href="ORDER HISTORY.html">Order History</a></li>
+                <hr>
+                <li class="logout"><a href="signup.html">Log Out</a></li>
+            </ul>
 
-        <div class="sidebar-help">
-            <h3>Help & Support</h3>
+            <!-- Help & Support -->
+            <div class="sidebar-help">
+                <h3>Help & Support</h3>
 
-            <div class="help-item">
-                <span class="help-icon">☏</span>
-                <div class="help-text">
-                    <small>Call Us</small>
-                    <a href="tel:+639XXXXXXXXX">+63 9XX XXX XXXX</a>
+                <div class="help-item">
+                    <span class="help-icon">☏</span>
+                    <div class="help-text">
+                        <small>Call Us</small>
+                        <a href="tel:+639XXXXXXXXX">+63 9XX XXX XXXX</a>
+                    </div>
+                </div>
+
+                <div class="help-item">
+                    <span class="help-icon">✉</span>
+                    <div class="help-text">
+                        <small>Email Us</small>
+                        <a href="mailto:pinggangpinoy_support@gmail.com">
+                            pinggangpinoy_support@gmail.com
+                        </a>
+                    </div>
                 </div>
             </div>
+        </aside>
 
-            <div class="help-item">
-                <span class="help-icon">✉</span>
-                <div class="help-text">
-                    <small>Email Us</small>
-                    <a href="mailto:pinggangpinoy_support@gmail.com">
-                        pinggangpinoy_support@gmail.com
-                    </a>
-                </div>
-            </div>
+        <!-- Mobile Navigation Bar -->
+        <div class="mobile-nav-bar">
+            <a href="ACCOUNTS.html">Account</a>
+            <a href="HEALTH PROFILE.html">Health Profile</a>
+            <a href="NUTRITION PLAN.html">Nutrition Plan</a>
+            <a href="ORDER HISTORY.html" class="active">Order History</a>
         </div>
-    </aside>
 
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
+        <!-- MAIN CONTENT -->
+        <main class="content">
 
-        <div class="order-history-card">
+            <div class="order-history-card">
 
-            <div class="order-header">
-                <h2 class="section-title">Order History</h2>
-                <span class="order-count">4 orders</span>
+                <div class="order-header">
+                    <h2 class="section-title">Order History</h2>
+                    <span class="order-count">4 orders</span>
+                </div>
+
+                <p class="order-subtitle">Track and manage your past orders</p>
+
+                <!-- ORDER LIST -->
+                <div class="order-list">
+
+                    <!-- Order Item -->
+                    <div class="order-item">
+                        <div class="order-icon">🛒</div>
+
+                        <div class="order-details">
+                            <div class="order-top">
+                                <span class="order-id">PP-2025-1234</span>
+                                <span class="status-badge delivered">✓ Delivered</span>
+                            </div>
+                            <p class="order-date">December 15, 2024</p>
+                            <p class="order-items">Sinigang na Baboy, Pinakbet, Ensaladang Talong</p>
+                        </div>
+
+                        <div class="order-actions">
+                            <div class="order-price">₱450</div>
+                            <div class="order-item-count">3 items</div>
+                            <div class="order-buttons">
+                                <button class="btn-reorder">↻ Reorder</button>
+                                <button class="btn-view">›</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-item">
+                        <div class="order-icon">🛒</div>
+                        <div class="order-details">
+                            <div class="order-top">
+                                <span class="order-id">PP-2025-1233</span>
+                                <span class="status-badge in-transit">🚚 In Transit</span>
+                            </div>
+                            <p class="order-date">December 14, 2024</p>
+                            <p class="order-items">Chicken Tinola, Grilled Bangus</p>
+                        </div>
+                        <div class="order-actions">
+                            <div class="order-price">₱410</div>
+                            <div class="order-item-count">2 items</div>
+                            <div class="order-buttons">
+                                <button class="btn-reorder">↻ Reorder</button>
+                                <button class="btn-view">›</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-item">
+                        <div class="order-icon">🛒</div>
+                        <div class="order-details">
+                            <div class="order-top">
+                                <span class="order-id">PP-2025-1232</span>
+                                <span class="status-badge delivered">✓ Delivered</span>
+                            </div>
+                            <p class="order-date">December 12, 2025</p>
+                            <p class="order-items">Kare-Kare, Sinigang na Hipon, Bicol Express</p>
+                        </div>
+                        <div class="order-actions">
+                            <div class="order-price">₱680</div>
+                            <div class="order-item-count">3 items</div>
+                            <div class="order-buttons">
+                                <button class="btn-reorder">↻ Reorder</button>
+                                <button class="btn-view">›</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-item">
+                        <div class="order-icon">🛒</div>
+                        <div class="order-details">
+                            <div class="order-top">
+                                <span class="order-id">PP-2025-1231</span>
+                                <span class="status-badge delivered">✓ Delivered</span>
+                            </div>
+                            <p class="order-date">December 10, 2024</p>
+                            <p class="order-items">Weekly Balanced Plan</p>
+                        </div>
+                        <div class="order-actions">
+                            <div class="order-price">₱2,499</div>
+                            <div class="order-item-count">21 items</div>
+                            <div class="order-buttons">
+                                <button class="btn-reorder">↻ Reorder</button>
+                                <button class="btn-view">›</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="load-more-section">
+                    <button class="btn-load-more">Load More Orders</button>
+                </div>
+
             </div>
+        </main>
+    </div>
 
-            <p class="order-subtitle">Track and manage your past orders</p>
-
-            <!-- ORDER LIST -->
-            <div class="order-list">
-
-                <!-- Order Item -->
-                <div class="order-item">
-                    <div class="order-icon">🛒</div>
-
-                    <div class="order-details">
-                        <div class="order-top">
-                            <span class="order-id">PP-2025-1234</span>
-                            <span class="status-badge delivered">✓ Delivered</span>
-                        </div>
-                        <p class="order-date">December 15, 2024</p>
-                        <p class="order-items">Sinigang na Baboy, Pinakbet, Ensaladang Talong</p>
-                    </div>
-
-                    <div class="order-actions">
-                        <div class="order-price">₱450</div>
-                        <div class="order-item-count">3 items</div>
-                        <div class="order-buttons">
-                            <button class="btn-reorder">↻ Reorder</button>
-                            <button class="btn-view">›</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="order-item">
-                    <div class="order-icon">🛒</div>
-                    <div class="order-details">
-                        <div class="order-top">
-                            <span class="order-id">PP-2025-1233</span>
-                            <span class="status-badge in-transit">🚚 In Transit</span>
-                        </div>
-                        <p class="order-date">December 14, 2024</p>
-                        <p class="order-items">Chicken Tinola, Grilled Bangus</p>
-                    </div>
-                    <div class="order-actions">
-                        <div class="order-price">₱410</div>
-                        <div class="order-item-count">2 items</div>
-                        <div class="order-buttons">
-                            <button class="btn-reorder">↻ Reorder</button>
-                            <button class="btn-view">›</button>
-                        </div>
-                    
-                    </div>
-                </div>
-
-                <div class="order-item">
-                    <div class="order-icon">🛒</div>
-                    <div class="order-details">
-                        <div class="order-top">
-                            <span class="order-id">PP-2025-1232</span>
-                            <span class="status-badge delivered">✓ Delivered</span>
-                        </div>
-                        <p class="order-date">December 12, 2025</p>
-                        <p class="order-items">Kare-Kare, Sinigang na Hipon, Bicol Express</p>
-                    </div>
-                    <div class="order-actions">
-                        <div class="order-price">₱680</div>
-                        <div class="order-item-count">3 items</div>
-                        <div class="order-buttons">
-                            <button class="btn-reorder">↻ Reorder</button>
-                            <button class="btn-view">›</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="order-item">
-                    <div class="order-icon">🛒</div>
-                    <div class="order-details">
-                        <div class="order-top">
-                            <span class="order-id">PP-2025-1231</span>
-                            <span class="status-badge delivered">✓ Delivered</span>
-                        </div>
-                        <p class="order-date">December 10, 2024</p>
-                        <p class="order-items">Weekly Balanced Plan</p>
-                    </div>
-                    <div class="order-actions">
-                        <div class="order-price">₱2,499</div>
-                        <div class="order-item-count">21 items</div>
-                        <div class="order-buttons">
-                            <button class="btn-reorder">↻ Reorder</button>
-                            <button class="btn-view">›</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="load-more-section">
-                <button class="btn-load-more">Load More Orders</button>
-            </div>
-
-        </div>
-    </main>
-</div>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>

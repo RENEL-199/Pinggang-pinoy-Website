@@ -21,7 +21,7 @@
 }
 
 body {
-    background-color: var(--body-green);
+    background-color: #1B3D2F;
     font-family: 'Poppins', sans-serif;
     color: var(--dark-green);
     min-height: 100vh;
@@ -35,47 +35,114 @@ h3 {
     font-family: 'Cormorant Garamond', serif;
 }
 
-/* =======================
-   NAVBAR
-======================= */
+/* ========================
+   ANIMATIONS
+======================== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        top: -20px;
+    }
+    to {
+        opacity: 1;
+        top: 15px;
+    }
+}
+
+/* ========================
+   NAVBAR (GLASS STYLE)
+======================== */
 .navbar {
-    background-color: var(--nav-green);
-    color: var(--nav-text);
-    padding: 10px 20px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;
+    max-width: 1400px;
+    z-index: 1000;
+
+    background: rgba(27, 61, 47, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 12px 30px;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 1s ease;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.6rem;
 }
 
-.brand-logo {
-    width: 90px;
-    height: 90px;
+.nav-logo {
+    height: 55px;
+    width: 55px;
     object-fit: contain;
 }
 
-.brand-name {
-    font-family: 'Ultra', serif;
+.nav-text {
+    color: var(--nav-text);
+    font-family: "Playfair Display", serif;
     font-size: 22px;
 }
 
 .welcome-text {
     text-align: center;
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
+    font-size: 20px;
+    color: var(--nav-text);
 }
 
-.nav-link {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+/* Hamburger - Hidden on Desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--nav-text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
     color: var(--nav-text);
-    text-decoration: underline;
-    text-underline-offset: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* =======================
@@ -84,119 +151,12 @@ h3 {
 .container {
     display: flex;
     min-height: calc(100vh - 100px);
+    padding-top: 100px;
 }
 
-.main-content {
-    flex: 1;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* ========================
-   BANNER
-======================== */
-.banner {
-  display: flex;
-  align-items: end;
-  justify-content: flex-start;
-  position: relative;
-  background: linear-gradient(90deg, #2B4D3E, #2E5339);
-  color: #EAD9B7;
-  padding: 20px 100px;
-  height: 170px;
-  animation: fadeIn 1s ease;
-}
-
-.banner-text {
-  position: absolute;
- 
-  font-family: 'Cinzel', serif;
-  font-size: 40px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  color: #EAD9B7;
-}
-
-/* ========================
-   ANIMATIONS
-======================== */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    top: -20px;
-  }
-  to {
-    opacity: 1;
-    top: 15px;
-  }
-}
-/* ========================
-   NAVBAR (GLASS STYLE)
-======================== */
-.navbar {
-  position: fixed;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 94%;
-  z-index: 1000;
-
-  background: rgba(27, 61, 47, 0.85);
-  backdrop-filter: blur(10px);
-  padding: 12px 30px;
-  border-radius: 30px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  animation: fadeUp 1s ease;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.nav-logo {
-  height: 55px;
-}
-
-.nav-text {
-  color: var(--nav-text);
-  font-family: "Playfair Display", serif;
-  font-size: 26px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: var(--nav-text);
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 600;
-  position: relative;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: -6px;
-  background: var(--accent);
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
+/* Mobile Navigation Bar - Hidden on Desktop */
+.mobile-nav-bar {
+    display: none;
 }
 
 /* =======================
@@ -207,6 +167,7 @@ h3 {
     background-color: var(--nav-green);
     padding: 30px 20px;
     color: var(--nav-text);
+    flex-shrink: 0;
 }
 
 .sidebar ul {
@@ -214,12 +175,12 @@ h3 {
 }
 
 .sidebar li {
-    border-radius: 8px;
     margin-bottom: 12px;
+    border-radius: 8px;
     transition: background 0.3s ease;
 }
 
-.sidebar a {
+.sidebar li a {
     display: block;
     padding: 12px 15px;
     font-family: 'Montserrat', sans-serif;
@@ -233,7 +194,7 @@ h3 {
 }
 
 .logout {
-    margin-top: 30px;
+    margin-top: 25px;
     color: #f2c9a0;
 }
 
@@ -255,9 +216,10 @@ h3 {
 
 /* Help items */
 .help-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    column-gap: 10px;
+    align-items: start;
     padding: 10px 12px;
     border-radius: 10px;
     transition: background 0.3s ease;
@@ -272,7 +234,9 @@ h3 {
 }
 
 .help-icon {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
 }
 
 .help-text small {
@@ -289,7 +253,6 @@ h3 {
     color: var(--nav-text);
     text-decoration: none;
     word-break: break-word;
-    padding-left: -50px;
 }
 
 .help-text a:hover {
@@ -297,14 +260,25 @@ h3 {
 }
 
 /* =======================
+   MAIN CONTENT
+======================= */
+.content {
+    flex: 1;
+    padding: 35px;
+    overflow-y: auto;
+    background-color: #DFF5E0;
+}
+
+/* =======================
    HEALTH PROFILE CARD
 ======================= */
 .health-profile-card {
     background-color: var(--white);
-    border-radius: 20px;
+    border-radius: 18px;
     padding: 30px;
     max-width: 900px;
     margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 /* SECTION TITLE */
@@ -394,7 +368,7 @@ h3 {
     color: #2e7d32;
 }
 
-.diet-card input:checked {
+.diet-card:has(input:checked) {
     border-color: var(--success);
 }
 
@@ -455,7 +429,7 @@ h3 {
 
 /* Selected state */
 .allergy-pill input:checked + span {
-    background-color: #2E5339; /* matches image tone */
+    background-color: #2E5339;
     border-color: #2E5339;
     color: var(--white);
 }
@@ -479,43 +453,232 @@ h3 {
 
 .save-btn:hover {
     background-color: #2E5339;
+    color: var(--white);
     transform: translateY(-2px);
 }
 
-/* === FORCE HELP ALIGNMENT (OVERRIDE FIX) === */
-.sidebar-help .help-item {
-    display: grid !important;
-    grid-template-columns: 28px 1fr !important;
-    column-gap: 10px !important;
-    align-items: start !important;
+/* =======================
+   RESPONSIVE - MOBILE
+======================= */
+@media (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar {
+        transform: none;
+        left: 0;
+        position: fixed;
+        top: 10px;
+        padding: 0.75em 1em;
+        width: calc(100% - 20px);
+        margin: 0 10px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        border-radius: 20px;
+    }
+
+    .nav-logo {
+        height: 38px;
+        width: 38px;
+    }
+
+    .nav-text {
+        font-size: 16px;
+    }
+
+    /* Hide welcome text on mobile */
+    .welcome-text {
+        display: none;
+    }
+
+    /* Show hamburger on mobile */
+    .hamburger {
+        display: flex;
+        order: 3;
+    }
+
+    /* Nav links - dropdown style on mobile */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-green);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        border-radius: 0 0 12px 12px;
+        margin-top: 10px;
+    }
+
+    .nav-links.active {
+        max-height: 300px;
+        opacity: 1;
+        pointer-events: auto;
+        padding: 0.75rem 0;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+        display: block;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    /* Hide sidebar on mobile */
+    .sidebar {
+        display: none;
+    }
+
+    /* Show mobile navigation bar */
+    .mobile-nav-bar {
+        display: flex;
+        background-color: var(--nav-green);
+        padding: 10px 15px;
+        gap: 10px;
+        overflow-x: auto;
+        position: sticky;
+        top: 80px;
+        z-index: 100;
+        width: 100%;
+    }
+
+    .mobile-nav-bar a {
+        color: var(--accent);
+        font-size: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: 20px;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-nav-bar a.active,
+    .mobile-nav-bar a:hover {
+        background-color: var(--dark-green);
+        color: var(--nav-text);
+    }
+
+    /* Container adjustments */
+    .container {
+        flex-direction: column;
+        padding-top: 80px;
+    }
+
+    /* Content adjustments */
+    .content {
+        padding: 15px;
+    }
+
+    /* Health profile card adjustments */
+    .health-profile-card {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .section-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .profile-section h3 {
+        font-size: 14px;
+    }
+
+    /* Diet grid - stack on smaller screens */
+    .diet-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .diet-card {
+        padding: 14px;
+    }
+
+    .diet-content h4 {
+        font-size: 14px;
+    }
+
+    .diet-content p {
+        font-size: 12px;
+    }
+
+    /* Allergy pills */
+    .allergy-pill-group {
+        gap: 8px;
+    }
+
+    .allergy-pill span {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    /* Save button */
+    .save-section {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .save-btn {
+        width: 100%;
+        padding: 14px 20px;
+    }
 }
 
-.sidebar-help .help-icon {
-    font-size: 18px;
-    line-height: 1 !important;
-    text-align: center;
-}
+/* Extra small screens */
+@media (max-width: 480px) {
+   .navbar {
+        padding: 0.5em 0.75em;
+        position: absolute;
+    }
 
-.sidebar-help .help-text {
-    margin: 0 !important;
-    padding: 0 !important;
-}
+    .nav-text {
+        font-size: 14px;
+    }
 
-.sidebar-help .help-text small,
-.sidebar-help .help-text a {
-    display: block;
-    padding: 0 !important;
-    margin: 0 !important;
-    text-align: left;
-}
+    .mobile-nav-bar {
+        gap: 5px;
+        padding: 8px 10px;
+        position: sticky;
+        top: 0px;
+    }
 
-.sidebar-help .help-text small {
-    margin-bottom: 2px !important;
-    line-height: 1.15;
-}
 
-.sidebar-help .help-text a {
-    line-height: 1.3;
-    word-break: normal !important;
-    overflow-wrap: anywhere;
+    .mobile-nav-bar a {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .health-profile-card {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .profile-section h3 {
+        font-size: 13px;
+    }
+
+    .diet-card {
+        padding: 12px;
+    }
+
+    .allergy-pill span {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
 }

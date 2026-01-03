@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinggang Pinoy – Nutrition Plan</title>
 
     <!-- Google Fonts -->
@@ -16,43 +17,44 @@
 <body>
 
     <!-- NAVBAR -->
-    <div class="banner">
-
-        <!-- ✅ NAVBAR (NO <center>) -->
-        <div class="navbar">
-            <div class="brand">
-                <img src="images/logo.png" alt="Logo" class="nav-logo">
-                <span class="nav-text">Pinggang Pinoy</span>
-            </div>
-
-            <div class="nav-links">
-                <a href="home.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="CART.html">Cart</a>
-                <a href="ACCOUNTS.html">Account</a>
-
-            </div>
+    <div class="navbar">
+        <div class="brand">
+            <img src="images/logo.png" alt="Pinggang Pinoy Logo" class="nav-logo">
+            <span class="nav-text">Pinggang Pinoy</span>
         </div>
 
-        <div class="banner-text">
-            Nutrition Plan
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
 
+        <div class="welcome-text">Welcome, Name!</div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="CART.html">Cart</a>
+            <a href="ACCOUNTS.html">Account</a>
+        </div>
     </div>
+
     <!-- MAIN LAYOUT -->
     <div class="container">
 
         <!-- SIDEBAR -->
         <aside class="sidebar">
-            <ul>
+            <ul class="sidebar-menu">
                 <li><a href="ACCOUNTS.html">Account Profile</a></li>
                 <li><a href="HEALTH PROFILE.html">Health Profile</a></li>
-                <li class="active"><a href="NUTRION PLAN.html">Nutrition Plan</a></li>
+                <li class="active"><a href="NUTRITION PLAN.html">Nutrition Plan</a></li>
                 <li><a href="ORDER HISTORY.html">Order History</a></li>
                 <hr>
-                <li class="logout"><a href="index.html">Log Out</a></li>
+                <li class="logout"><a href="signup.html">Log Out</a></li>
             </ul>
 
+            <!-- Help & Support -->
             <div class="sidebar-help">
                 <h3>Help & Support</h3>
 
@@ -76,8 +78,16 @@
             </div>
         </aside>
 
+        <!-- Mobile Navigation Bar -->
+        <div class="mobile-nav-bar">
+            <a href="ACCOUNTS.html">Account</a>
+            <a href="HEALTH PROFILE.html">Health Profile</a>
+            <a href="NUTRITION PLAN.html" class="active">Nutrition Plan</a>
+            <a href="ORDER HISTORY.html">Order History</a>
+        </div>
+
         <!-- MAIN CONTENT -->
-        <main class="nutrition-content">
+        <main class="content">
 
             <!-- SUBSCRIPTION CARD -->
             <div class="subscription-card">
@@ -120,9 +130,7 @@
             </div>
 
             <!-- EXPLORE OTHER PLANS -->
-            <br><br>
             <h3 class="explore-title">Explore Other Plans</h3>
-            <br>
 
             <div class="explore-grid">
 
@@ -183,6 +191,13 @@
         </main>
 
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
 </body>
 

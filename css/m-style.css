@@ -476,23 +476,15 @@ p {
 
 
 @media (max-width: 768px) {
-
-
-
     .navbar {
         transform: none;
         left: 0%;
         position: absolute;
         padding: 0.5em 1em;
-        /* reduce padding */
         width: 100%;
-        /* full viewport width */
         max-width: 1200px;
-        /* optional: limits width on large screens */
         box-sizing: border-box;
-        /* ensures padding doesn’t break width */
         flex-wrap: wrap;
-        /* allows items to go to next line if needed */
         gap: 0.5em;
         animation: none !important;
         transition: none !important;
@@ -605,6 +597,8 @@ p {
         color: #EAD9B7;
         border-bottom: 2px solid #EAD9B7;
     }
+
+
 
     .food-container {
         padding: 5px;
