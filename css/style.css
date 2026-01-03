@@ -718,7 +718,9 @@ select {
         position: absolute;
     }
 
-    
+    .nav-text {
+        font-size: 14px;
+    }
 
     .mobile-nav-bar {
         gap: 5px;
@@ -726,9 +728,7 @@ select {
         position: sticky;
         top: 0px;
     }
-.nav-text {
-        font-size: 14px;
-    }
+
     .mobile-nav-bar a {
         font-size: 11px;
         padding: 6px 10px;
