@@ -650,7 +650,14 @@ h3 {
         font-size: 16px;
     }
 }
-
+footer {
+    background: linear-gradient(180deg, #2E5339, #1B3D2F);
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+  color: var(--nav-text);
+  opacity: 0.9;
+}
 /* Extra small screens */
 @media (max-width: 480px) {
     .navbar {
