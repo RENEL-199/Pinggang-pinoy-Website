@@ -1,0 +1,302 @@
+
+/* ========================
+   GLOBAL RESET & VARIABLES
+======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --body-green: #DFF5E0;
+  --nav-green: #1B3D2F;
+  --nav-text: #EAD9B7;
+  --accent: #CBB48A;
+  --dark-green: #2E5339;
+  --white: #ffffff;
+}
+
+body {
+  background: linear-gradient(180deg, #2E5339, #1B3D2F);
+}
+
+/* ========================
+   ANIMATIONS
+======================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    top: -20px;
+  }
+  to {
+    opacity: 1;
+    top: 15px;
+  }
+}
+
+
+/* ========================
+   NAVBAR (GLASS STYLE)
+======================== */
+
+
+.navbar {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 94%;
+  z-index: 1000;
+
+  background: rgba(27, 61, 47, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 12px 30px;
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeUp 1s ease;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav-logo {
+  height: 55px;
+}
+
+.nav-text {
+  color: var(--nav-text);
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--nav-text);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ========================
+   HERO BACKGROUND
+======================== */
+.bg-image {
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.6)),
+    url('../images/blur.png') center/cover no-repeat;
+  margin: 15px;
+  border-radius: 30px;
+  animation: fadeUp 1.2s ease;
+}
+
+/* ========================
+   HERO SECTION
+======================== */
+.hero {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px;
+  color: white;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.title {
+  color: var(--nav-text);
+  font-family: "Playfair Display", serif;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  color: var(--accent);
+  margin: 15px 0;
+}
+
+.desc {
+  font-size: 20px;
+  color: var(--body-green);
+  margin-bottom: 35px;
+  max-width: 520px;
+}
+
+.hero-img img {
+  max-width: 500px;
+  animation: fadeUp 1.5s ease;
+}
+
+/* ========================
+   IMAGE SLIDER
+======================== */
+.slider {
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+  margin: 60px auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slides img {
+  height: 600px;
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* ========================
+   PLAN SECTION
+======================== */
+.plan-section {
+  padding: 40px;
+}
+
+.plan-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.plan-box {
+  background: linear-gradient(145deg, #DFF5E0, #F4FFF5);
+  padding: 30px;
+  border-radius: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* ========================
+   ABOUT / MISSION / VISION
+======================== */
+.about-section {
+  background: #ffffff;
+  padding: 80px;
+  text-align: center;
+  margin-top: 60px;
+  border-radius: 30px 30px 0 0;
+  animation: fadeUp 1s ease;
+}
+
+.about-section h2 {
+  font-size: 42px;
+  color: var(--nav-green);
+  margin-bottom: 25px;
+}
+
+.about-section p {
+  max-width: 850px;
+  margin: auto;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.mv-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.mv-box {
+  flex: 1;
+  background: linear-gradient(145deg, #DFF5E0, #F4FFF5);
+  padding: 45px;
+  border-radius: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.mv-box h3 {
+  font-size: 28px;
+  color: var(--nav-green);
+  margin-bottom: 15px;
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+  color: var(--nav-text);
+  opacity: 0.9;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 50px;
+  }
+
+  .hero-img img {
+    margin-top: 40px;
+    max-width: 300px;
+  }
+
+  .mv-container {
+    flex-direction: column;
+  }
+}

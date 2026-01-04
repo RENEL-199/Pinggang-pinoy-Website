@@ -3,120 +3,112 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Cart — Pinggang Pinoy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cart.css">
-
-    <style>
-        .qty-btn {
-            padding: 6px 12px;
-            border: 1px solid var(--nav-green);
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .remove-btn {
-            padding: 6px 12px;
-            background: #b22;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-    </style>
-
 </head>
 
 <body>
-    <!-- NAVBAR -->
+
     <div class="banner">
-        <!-- ✅ NAVBAR (NO <center>) -->
         <div class="navbar">
             <div class="brand">
                 <img src="images/logo.png" alt="Logo" class="nav-logo">
                 <span class="nav-text">Pinggang Pinoy</span>
             </div>
 
+            <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
             <div class="nav-links">
                 <a href="home.html">Home</a>
                 <a href="menu.html">Menu</a>
                 <a href="CART.html">Cart</a>
                 <a href="ACCOUNTS.html">Account</a>
-
             </div>
         </div>
 
         <div class="banner-text">
             Cart
         </div>
-
     </div>
 
-    <!-- CART CONTENT -->
     <div class="container">
         <div class="main-content">
 
-            <h2 style="margin: 15px;">Selected Items</h2>
+            <h2 class="section-title">Selected Items</h2>
 
             <div id="cart-items"></div>
 
-            <div class="card" style="margin-top:20px;">
+            <div class="card summary-card" id="order-summary">
                 <h3>Order Summary</h3>
-                <p id="total-text"
-                    style="background:none; box-shadow:none; border:none; padding:5px 0; color:var(--dark-green)">
-                    Total: ₱0.00
-                </p>
-                <button id="checkout-btn" style="font-size:18px;background:var(--nav-green);color:var(--nav-text);
-                    padding:12px 25px;border:none;border-radius:12px;cursor:pointer;text-align:center;">
-                    Checkout
-                </button>
+                <p id="total-text">Total: ₱0.00</p>
+                <button id="checkout-btn">Checkout</button>
             </div>
 
-            <div id="checkout-form" style="display:none; margin-top:20px;" class="card">
+            <br>
+
+            <div id="checkout-form" class="card form-card">
                 <h3>Checkout Details</h3>
                 <form id="checkout-form-element">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" required
-                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+                    
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" class="checkout-input" required>
+                    </div>
 
-                    <label for="phone">Phone Number:</label><br>
-                    <input type="tel" id="phone" required
-                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" class="checkout-input" required>
+                    </div>
 
-                    <label for="block_lot">Block and Lot:</label><br>
-                    <input type="text" id="block_lot"
-                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+                    <div class="form-group">
+                        <label for="block_lot">Block and Lot:</label>
+                        <input type="text" id="block_lot" class="checkout-input">
+                    </div>
 
-                    <label for="street">Street:</label><br>
-                    <input type="text" id="street"
-                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+                    <div class="form-group">
+                        <label for="street">Street:</label>
+                        <input type="text" id="street" class="checkout-input">
+                    </div>
 
-                    <label for="barangay">Barangay:</label><br>
-                    <input type="text" id="barangay"
-                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+                    <div class="form-group">
+                        <label for="barangay">Barangay:</label>
+                        <input type="text" id="barangay" class="checkout-input">
+                    </div>
 
-                    <label for="city">City:</label><br>
-                    <input type="text" id="city" style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" class="checkout-input">
+                    </div>
 
-                    <label for="province">Province:</label><br>
-                    <input type="text" id="province"
-                        style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+                    <div class="form-group">
+                        <label for="province">Province:</label>
+                        <input type="text" id="province" class="checkout-input">
+                    </div>
 
-                    <label for="zip">ZIP Code:</label><br>
-                    <input type="text" id="zip" style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;"><br>
+                    <div class="form-group">
+                        <label for="zip">ZIP Code:</label>
+                        <input type="text" id="zip" class="checkout-input">
+                    </div>
 
-                    <label for="payment">Payment Method:</label><br>
-                    <select id="payment" required style="width: 100%; max-width: 400px; padding:8px; margin:5px 0;">
-                        <option value="cash">Cash on Delivery</option>
-                    </select><br>
+                    <div class="form-group">
+                        <label for="payment">Payment Method:</label>
+                        <select id="payment" class="checkout-input" required>
+                            <option value="cash">Cash on Delivery</option>
+                        </select>
+                    </div>
 
-                    <button type="submit"
-                        style="font-size:18px;background:var(--nav-green);color:var(--nav-text);
-                        padding:12px 25px;border:none;border-radius:12px;cursor:pointer;text-align:center; margin-top:10px;">
-                        Complete Order
-                    </button>
+                    <button type="submit" class="submit-btn">Complete Order</button>
                 </form>
             </div>
 
@@ -126,5 +118,4 @@
     <script src="js/cart.js"></script>
 
 </body>
-
 </html>

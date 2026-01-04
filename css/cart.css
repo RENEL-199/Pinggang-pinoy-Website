@@ -1,7 +1,3 @@
-/* =======================
-   CART PAGE STYLE ONLY
-======================= */
-
 :root {
     --body-green: #DFF5E0;
     --nav-green: #1B3D2F;
@@ -12,130 +8,14 @@
     --buttons: rgba(255, 255, 255, 0.65);
 }
 
-/* Page background */
+/* ---------- BASE ---------- */
 body {
     background-color: var(--body-green);
     font-family: 'Poppins', sans-serif;
     color: var(--dark-green);
 }
 
-/* Container for cart page - make it narrower and centered */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-
-
-/* ========================
-   BANNER
-======================== */
-.banner {
-  display: flex;
-  align-items: end;
-  justify-content: flex-start;
-  position: relative;
-  background: linear-gradient(90deg, #2B4D3E, #2E5339);
-  color: #EAD9B7;
-  padding: 20px 100px;
-  height: 170px;
-  animation: fadeIn 1s ease;
-}
-
-.banner-text {
-  position: absolute;
- 
-  font-family: 'Cinzel', serif;
-  font-size: 40px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  color: #EAD9B7;
-}
-
-/* ========================
-   ANIMATIONS
-======================== */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    top: -20px;
-  }
-  to {
-    opacity: 1;
-    top: 15px;
-  }
-}
-
-/* ========================
-   NAVBAR (GLASS STYLE)
-======================== */
-.navbar {
-  position: fixed;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 94%;
-  z-index: 1000;
-
-  background: rgba(27, 61, 47, 0.85);
-  backdrop-filter: blur(10px);
-  padding: 12px 30px;
-  border-radius: 30px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  animation: fadeUp 1s ease;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.nav-logo {
-  height: 55px;
-}
-
-.nav-text {
-  color: var(--nav-text);
-  font-family: "Playfair Display", serif;
-  font-size: 26px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: var(--nav-text);
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 600;
-  position: relative;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: -6px;
-  background: var(--accent);
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-
-/* Cart item cards */
+/* ---------- CART ITEMS ---------- */
 #cart-items .cart-card {
     width: 100%;
     background: var(--white);
@@ -148,22 +28,19 @@ body {
     align-items: center;
 }
 
-/* Item titles */
-#cart-items .item-title {
+.item-title {
     font-size: 18px;
     font-weight: bold;
-    color: var(--dark-green);
     margin-bottom: 6px;
 }
 
-/* Price text */
-#cart-items .item-price {
+.item-price {
     color: var(--nav-green);
     font-size: 17px;
     font-weight: 600;
 }
 
-/* Buttons */
+/* ---------- BUTTONS ---------- */
 .qty-btn {
     background: var(--buttons);
     color: var(--nav-green);
@@ -172,12 +49,13 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    transition: 0.2s ease;
     padding: 6px 14px;
+    transition: 0.2s ease;
 }
+
 .qty-btn:hover {
-    transform: scale(1.1);
     background: var(--accent);
+    transform: scale(1.1);
 }
 
 .remove-btn {
@@ -185,15 +63,16 @@ body {
     color: #fff;
     padding: 6px 14px;
     border-radius: 6px;
+    border: none;
     cursor: pointer;
     font-size: 14px;
-    border: none;
 }
+
 .remove-btn:hover {
     background: #911;
 }
 
-/* Order summary */
+/* ---------- ORDER SUMMARY ---------- */
 #cart-summary {
     background: var(--white);
     border-radius: 12px;
@@ -204,7 +83,6 @@ body {
 
 #cart-summary h3 {
     font-size: 22px;
-    font-family: 'Cormorant Garamond', serif;
     margin-bottom: 10px;
 }
 
@@ -214,26 +92,42 @@ body {
     color: var(--nav-green);
 }
 
-/* Checkout Button */
+/* ---------- CHECKOUT BUTTON ---------- */
 #checkout-btn {
-    background: var(--nav-green);
-    color: var(--nav-text);
-    padding: 12px 25px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
     width: 100%;
-    margin-top: 12px;
-    font-size: 18px;
-    font-weight: 600;
-    transition: 0.2s ease;
-}
-#checkout-btn:hover {
-    background: var(--accent);
-    transform: translateY(-2px);
+    margin-top: 20px;
+    padding: 16px 0;
+
+    background: linear-gradient(135deg, #1B3D2F, #2E5339);
+    color: #EAD9B7;
+
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(27, 61, 47, 0.35);
+    transition: all 0.25s ease;
 }
 
-/* Toast Notification */
+/* Hover effect */
+#checkout-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(27, 61, 47, 0.45);
+    background: linear-gradient(135deg, #2E5339, #1B3D2F);
+}
+
+/* Click / press effect */
+#checkout-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 14px rgba(27, 61, 47, 0.35);
+}
+
+
+/* ---------- TOAST ---------- */
 .toast {
     position: fixed;
     top: 20px;
@@ -248,7 +142,282 @@ body {
     font-weight: 600;
     z-index: 9999;
 }
+
 .toast.show {
     opacity: 1;
     transform: translateX(0);
+}
+
+
+/* ========================
+   BANNER
+======================== */
+.banner {
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+    position: relative;
+    background: linear-gradient(90deg, #2B4D3E, #2E5339);
+    color: #EAD9B7;
+    padding: 20px 100px;
+    height: 180px;
+    animation: fadeIn 1s ease;
+}
+
+.banner-text {
+    position: absolute;
+
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #EAD9B7;
+}
+
+/* ========================
+   ANIMATIONS
+======================== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        top: -20px;
+    }
+
+    to {
+        opacity: 1;
+        top: 15px;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;
+    max-width: 1400px;
+    z-index: 1000;
+
+    background: rgba(27, 61, 47, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 12px 30px;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 1s ease;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.nav-logo {
+    height: 55px;
+    width: 55px;
+    object-fit: contain;
+}
+
+.nav-text {
+    color: var(--nav-text);
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+}
+
+.welcome-text {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--nav-text);
+}
+
+/* Hamburger - Hidden on Desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--nav-text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* ==========================
+   MOBILE NAVBAR (CART ONLY)
+========================== */
+
+@media (max-width: 768px) {
+
+   .banner {
+        padding: 20px;
+        height:130px;
+    }
+
+    .banner-text {
+        font-size: 30px;
+        top: 65%;
+    }
+
+
+
+    .navbar {
+        transform: none;
+        left: 0;
+        position: fixed;
+        top: 10px;
+        padding: 0.75em 1em;
+        width: calc(100% - 20px);
+        margin: 0 10px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        border-radius: 20px;
+    }
+
+    .nav-logo {
+        height: 38px;
+        width: 38px;
+    }
+
+    .nav-text {
+        font-size: 16px;
+    }
+
+    /* Hide welcome text on mobile */
+    .welcome-text {
+        display: none;
+    }
+
+    /* Show hamburger on mobile */
+    .hamburger {
+        display: flex;
+        order: 3;
+    }
+
+    /* Nav links - dropdown style on mobile */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-green);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        border-radius: 0 0 12px 12px;
+        margin-top: 10px;
+    }
+
+    .nav-links.active {
+        max-height: 300px;
+        opacity: 1;
+        pointer-events: auto;
+        padding: 0.75rem 0;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+        display: block;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 900px;  
+    margin: 0 auto;   
+}
+
+/* ==========================
+   COMPLETE ORDER BUTTON
+========================== */
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px 0;
+
+    background: linear-gradient(135deg, #1B3D2F, #2E5339);
+    color: #EAD9B7;
+
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(27, 61, 47, 0.35);
+    transition: all 0.25s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(27, 61, 47, 0.45);
+    background: linear-gradient(135deg, #2E5339, #1B3D2F);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 14px rgba(27, 61, 47, 0.35);
 }
