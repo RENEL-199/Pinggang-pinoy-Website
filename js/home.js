@@ -1,3 +1,8 @@
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
+
 
 let currentIndex = 0;
 const slides = document.querySelector('.slides');

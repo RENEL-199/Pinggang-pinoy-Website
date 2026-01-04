@@ -9,6 +9,12 @@
   scroll-behavior: smooth;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 :root {
   --body-green: #DFF5E0;
   --nav-green: #1B3D2F;
@@ -20,6 +26,7 @@
 
 body {
   background: linear-gradient(180deg, #2E5339, #1B3D2F);
+  overflow-x: hidden;
 }
 
 /* ========================
@@ -28,27 +35,24 @@ body {
 @keyframes fadeUp {
   from {
     opacity: 0;
-    top: -20px;
+    transform: translateY(-20px);
   }
-
   to {
     opacity: 1;
-    top: 15px;
+    transform: translateY(0);
   }
 }
 
-
 /* ========================
-   NAVBAR (GLASS STYLE)
+   NAVBAR
 ======================== */
-
-
 .navbar {
   position: fixed;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
   width: 94%;
+  max-width: 1200px;
   z-index: 1000;
 
   background: rgba(27, 61, 47, 0.85);
@@ -59,8 +63,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   animation: fadeUp 1s ease;
 }
 
@@ -77,35 +82,21 @@ body {
 .nav-text {
   color: var(--nav-text);
   font-family: "Playfair Display", serif;
-  font-size: 26px;
+  font-size: clamp(20px, 4vw, 26px);
 }
 
 .nav-links {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links a {
   color: var(--nav-text);
   text-decoration: none;
-  font-size: 17px;
+  font-size: clamp(14px, 3vw, 17px);
   font-weight: 600;
-  position: relative;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: -6px;
-  background: var(--accent);
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
 }
 
 /* ========================
@@ -113,7 +104,7 @@ body {
 ======================== */
 .bg-image {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.6)),
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.6)),
     url('../images/blur.png') center/cover no-repeat;
   margin: 15px;
   border-radius: 30px;
@@ -124,58 +115,47 @@ body {
    HERO SECTION
 ======================== */
 .hero {
-  min-height: calc(100vh - 100px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 80px;
+  gap: 40px;
   color: white;
+  flex-wrap: wrap;
 }
 
 .hero-text {
   max-width: 600px;
+  width: 100%;
 }
 
 .hero-text h1 {
-  font-size: 72px;
+  font-size: clamp(32px, 6vw, 72px);
   font-weight: 800;
   line-height: 1.1;
 }
 
-.title {
-  color: var(--nav-text);
-  font-family: "Playfair Display", serif;
-  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
 .hero-text h2 {
-  font-size: 36px;
+  font-size: clamp(18px, 4vw, 36px);
   color: var(--accent);
   margin: 15px 0;
 }
 
 .desc {
-  font-size: 20px;
-  color: var(--body-green);
-  margin-bottom: 35px;
+  font-size: clamp(14px, 3vw, 20px);
   max-width: 520px;
 }
 
-.hero-img img {
-  max-width: 500px;
-  animation: fadeUp 1.5s ease;
-}
-
 /* ========================
-   IMAGE SLIDER
+   SLIDER
 ======================== */
 .slider {
   width: 100%;
   max-width: 900px;
-  overflow: hidden;
   margin: 60px auto;
+  overflow: hidden;
   border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
 .slides {
@@ -184,35 +164,10 @@ body {
 }
 
 .slides img {
-  height: 600px;
   width: 100%;
-  flex-shrink: 0;
+  height: 60vh;
   object-fit: cover;
-}
-
-/* ========================
-   PLAN SECTION
-======================== */
-.plan-section {
-  padding: 40px;
-}
-
-.plan-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.plan-box {
-  background: linear-gradient(145deg, #DFF5E0, #F4FFF5);
-  padding: 30px;
-  border-radius: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.plan-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
 }
 
 /* ========================
@@ -222,21 +177,18 @@ body {
   background: #ffffff;
   padding: 80px;
   text-align: center;
-  margin-top: 60px;
   border-radius: 30px 30px 0 0;
-  animation: fadeUp 1s ease;
 }
 
 .about-section h2 {
-  font-size: 42px;
+  font-size: clamp(26px, 5vw, 42px);
   color: var(--nav-green);
-  margin-bottom: 25px;
 }
 
 .about-section p {
   max-width: 850px;
   margin: auto;
-  font-size: 18px;
+  font-size: clamp(14px, 3vw, 18px);
   color: #444;
   line-height: 1.7;
 }
@@ -245,23 +197,19 @@ body {
   display: flex;
   gap: 40px;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .mv-box {
   flex: 1;
-  background: linear-gradient(145deg, #DFF5E0, #F4FFF5);
+  min-width: 280px;
   padding: 45px;
   border-radius: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.mv-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #DFF5E0, #F4FFF5);
 }
 
 .mv-box h3 {
-  font-size: 28px;
+  font-size: clamp(20px, 4vw, 28px);
   color: var(--nav-green);
   margin-bottom: 15px;
 }
@@ -274,29 +222,35 @@ footer {
   padding: 18px;
   font-size: 14px;
   color: var(--nav-text);
-  opacity: 0.9;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: var(--nav-text);
-    border-radius: 2px;
-    transition: all 0.3s ease;
 }
 
 /* ========================
-   RESPONSIVE
+   TABLET
+======================== */
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 60px 30px;
+    text-align: center;
+  }
+
+  .mv-container {
+    flex-direction: column;
+  }
+}
+
+/* ========================
+   MOBILE
 ======================== */
 @media (max-width: 480px) {
 
+ 
   .navbar {
     transform: none;
     left: 0;
@@ -374,50 +328,20 @@ footer {
   .nav-links a {
     font-size: 15px;
   }
-
   .hero {
-    display: flex;
-    flex-direction: column;
-    padding: 80px 20px 20px 20px;
-  }
-
-  .hero-text h1 {
-    font-size: 34px;
-  }
-
-  .hero-text h2 {
-    font-size: 20px;
-  }
-
-  .desc {
-    font-size: 15px;
-  }
-
-  .slider{
-    margin-top: 0px;
+    padding: 40px 16px;
+    min-height: auto;
   }
 
   .slides img {
-    height: 45vh;
+    height: 40vh;
   }
 
   .about-section {
-    padding: 50px 20px;
-  }
-
-  .about-section h2 {
-    font-size: 30px;
-  }
-
-  .about-section p {
-    font-size: 15px;
-  }
-
-  .mv-container {
-    flex-direction: column;
+    padding: 40px 16px;
   }
 
   .mv-box {
-    padding: 30px;
+    padding: 25px;
   }
 }
