@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Cart — Pinggang Pinoy</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <link rel="stylesheet" href="css/footer-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -59,67 +60,146 @@
             </div>
 
             <br>
+<div id="checkout-form" class="card form-card">
+    <h3>Checkout Details</h3>
+    <form id="checkout-form-element">
 
-            <div id="checkout-form" class="card form-card">
-                <h3>Checkout Details</h3>
-                <form id="checkout-form-element">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" class="checkout-input" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" class="checkout-input" placeholder="09xxxxxxxxx" required>
+            </div>
+        </div>
 
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" class="checkout-input" required>
-                    </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="block_lot">Block & Lot:</label>
+                <input type="text" id="block_lot" class="checkout-input" placeholder="Block 1, Lot 12">
+            </div>
+            <div class="form-group">
+                <label for="street">Street:</label>
+                <input type="text" id="street" class="checkout-input" placeholder="Main Street">
+            </div>
+        </div>
 
-                    <div class="form-group">
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" class="checkout-input" required>
-                    </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="barangay">Barangay:</label>
+                <input type="text" id="barangay" class="checkout-input" placeholder="Barangay Name">
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" class="checkout-input" placeholder="City Name">
+            </div>
+        </div>
 
-                    <div class="form-group">
-                        <label for="block_lot">Block and Lot:</label>
-                        <input type="text" id="block_lot" class="checkout-input">
-                    </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="province">Province:</label>
+                <input type="text" id="province" class="checkout-input" placeholder="Province Name">
+            </div>
+            <div class="form-group">
+                <label for="zip">ZIP Code:</label>
+                <input type="text" id="zip" class="checkout-input" placeholder="1234">
+            </div>
+        </div>
 
-                    <div class="form-group">
-                        <label for="street">Street:</label>
-                        <input type="text" id="street" class="checkout-input">
-                    </div>
+        <div class="form-group full-width">
+            <label for="payment">Payment Method:</label>
+            <select id="payment" class="checkout-input" required>
+                <option value="cash">Cash on Delivery</option>
+            </select>
+        </div>
 
-                    <div class="form-group">
-                        <label for="barangay">Barangay:</label>
-                        <input type="text" id="barangay" class="checkout-input">
-                    </div>
+        <button type="submit" class="submit-btn">Complete Order</button>
+    </form>
+</div>
 
-                    <div class="form-group">
-                        <label for="city">City:</label>
-                        <input type="text" id="city" class="checkout-input">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="province">Province:</label>
-                        <input type="text" id="province" class="checkout-input">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="zip">ZIP Code:</label>
-                        <input type="text" id="zip" class="checkout-input">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="payment">Payment Method:</label>
-                        <select id="payment" class="checkout-input" required>
-                            <option value="cash">Cash on Delivery</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Complete Order</button>
-                </form>
             </div>
 
         </div>
     </div>
-<footer>
-    © 2025 Pinggang Pinoy. All rights reserved.
-  </footer>
+ <!-- FOOTER -->
+ <div class="footer-bg">
+    <div class="footer-content1">
+      <img src="images/logo.png" alt="footer logo" class="logo-img">
+      <div class="icons">
+        <a href="https://facebook.com/samrenly.cruzado"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://X.com/samrenly.cruzado"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/samrenly.cruzado"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/samrenly.cruzado"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+    </div>
+
+
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="footer logo" class="footer-logo-img">
+      </div>
+      <div class="footer-section">
+        <button class="footer-title">
+          About Us <span class="arrow">&#9660;</span>
+        </button>
+        <hr>
+        <div class="footer-links">
+          <div class="text-1">About Us</div>
+          <div class="text"><a href="home.html">Home</a></div>
+          <div class="text"><a href="home.html">Mission</a></div>
+          <div class="text"><a href="home.html">Vission</a></div>
+          
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <button class="footer-title">
+          Menu <span class="arrow">&#9660;</span>
+        </button>
+        <hr>
+        <div class="footer-links">
+          <div class="text-1">Menu</div>
+          <div class="text"><a href="menu.html">Menu</a></div>
+          <div class="text"><a href="CART.html">Cart</a></div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <button class="footer-title">
+          More <span class="arrow">&#9660;</span>
+        </button>
+        <hr>
+        <div class="footer-links">
+          <div class="text-1">Account</div>
+          <div class="text"><a href="ACCOUNTS.html">Account Profile</a></div>
+          <div class="text"><a href="HEALTH PROFILE.html">Health Profile</a></div>
+          <div class="text"><a href="NUTRITION PLAN.html">Nutrition Plan</a></div>
+          <div class="text"><a href="ORDER HISTORY.html">Order History</a></div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-2">
+      <div class="icons-1">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=samrenlyc@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+      </div>
+
+      <div class="text2">
+        <a href="#">Terms and Conditions</a>
+      </div>
+
+      <div class="text3">
+        © 2026 Pinggang Pinoy | All rights reserved.
+      </div>
+
+    </div>
+  </div>
     <script src="js/cart.js"></script>
 
 </body>

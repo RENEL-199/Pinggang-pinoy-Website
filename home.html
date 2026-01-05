@@ -7,10 +7,12 @@
   <title>Home - Pinggang Pinoy</title>
 
   <!-- Google Fonts -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link
+  
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@400;600&family=Playfair+Display:wght@500;700&family=Ultra&family=Cormorant+Garamond:wght@400;600&display=swap"
     rel="stylesheet">
-
+    
   <link rel="stylesheet" href="css/h2-style.css">
 </head>
 
@@ -75,7 +77,60 @@
       </div>
   </div>
 
-  </section>
+ <!-- FEATURED MEALS & PLANS -->
+<section class="featured-section">
+  <h2>Explore Our Healthy Meal Options</h2>
+  <p class="featured-desc">
+    Nutrition-guided Filipino meals and plans tailored to your needs.
+  </p>
+
+  <div class="featured-carousel">
+    <button class="carousel-btn prev" onclick="slideFeatured(-1)">&#10094;</button>
+
+    <div class="featured-track">
+
+      <a href="menu.html#pbm" class="featured-card">
+        <img src="images/pbm1.png" alt="Protein Meals">
+        <h3>Protein-Based Meals</h3>
+        <span>High-protein Filipino dishes</span>
+      </a>
+
+      <a href="menu.html#cbm" class="featured-card">
+        <img src="images/cbm1.png" alt="Carbohydrate Meals">
+        <h3>Carbohydrate-Based Meals</h3>
+        <span>Energy-rich & balanced carbs</span>
+      </a>
+
+      <a href="menu.html#fbm" class="featured-card">
+        <img src="images/fbm1.png" alt="Fiber Meals">
+        <h3>Fiber-Based Meals</h3>
+        <span>Vegetable-packed & digestion-friendly</span>
+      </a>
+
+      <a href="menu.html#hhm" class="featured-card">
+        <img src="images/hhm1.png" alt="Heart Healthy">
+        <h3>Heart-Healthy Meals</h3>
+        <span>Low-sodium & omega-rich meals</span>
+      </a>
+
+      <a href="menu.html#bfm" class="featured-card">
+        <img src="images/hf1.png" alt="Balanced Plan">
+        <h3>Balanced Filipino Plan</h3>
+        <span>Pinggang Pinoy–approved meals</span>
+      </a>
+
+      <a href="menu.html#dfm" class="featured-card">
+        <img src="images/dfm1.png" alt="Diabetic Plan">
+        <h3>Diabetic-Friendly Plan</h3>
+        <span>Low-glycemic & sugar-free</span>
+      </a>
+
+    </div>
+
+    <button class="carousel-btn next" onclick="slideFeatured(1)">&#10095;</button>
+  </div>
+</section>
+
 
   <!-- ABOUT / MISSION / VISION -->
   <section class="about-section">
@@ -106,9 +161,83 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    © 2025 Pinggang Pinoy. All rights reserved.
-  </footer>
+ <div class="footer-bg">
+    <div class="footer-content1">
+      <img src="images/logo.png" alt="footer logo" class="logo-img">
+      <div class="icons">
+        <a href="https://facebook.com/samrenly.cruzado"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://X.com/samrenly.cruzado"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/samrenly.cruzado"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/samrenly.cruzado"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+    </div>
+
+
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="footer logo" class="footer-logo-img">
+      </div>
+      <div class="footer-section">
+        <button class="footer-title">
+          About Us <span class="arrow">&#9660;</span>
+        </button>
+        <hr>
+        <div class="footer-links">
+          <div class="text-1">About Us</div>
+          <div class="text"><a href="home.html">Home</a></div>
+          <div class="text"><a href="home.html">Mission</a></div>
+          <div class="text"><a href="home.html">Vission</a></div>
+          
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <button class="footer-title">
+          Menu <span class="arrow">&#9660;</span>
+        </button>
+        <hr>
+        <div class="footer-links">
+          <div class="text-1">Menu</div>
+          <div class="text"><a href="menu.html">Menu</a></div>
+          <div class="text"><a href="CART.html">Cart</a></div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <button class="footer-title">
+          More <span class="arrow">&#9660;</span>
+        </button>
+        <hr>
+        <div class="footer-links">
+          <div class="text-1">Account</div>
+          <div class="text"><a href="ACCOUNTS.html">Account Profile</a></div>
+          <div class="text"><a href="HEALTH PROFILE.html">Health Profile</a></div>
+          <div class="text"><a href="NUTRITION PLAN.html">Nutrition Plan</a></div>
+          <div class="text"><a href="ORDER HISTORY.html">Order History</a></div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-2">
+      <div class="icons-1">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=samrenlyc@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+      </div>
+
+      <div class="text2">
+        <a href="#">Terms and Conditions</a>
+      </div>
+
+      <div class="text3">
+        © 2026 Pinggang Pinoy | All rights reserved.
+      </div>
+
+    </div>
+  </div>
+
   </div>
 
   <script src="js/home.js"></script>

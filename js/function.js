@@ -4,6 +4,19 @@ function toggleMenu() {
   navLinks.classList.toggle('active');
 }
 
+document.querySelectorAll(".footer-title").forEach(title => {
+  title.addEventListener("click", () => {
+    const section = title.parentElement;
+
+    // Optional: close other sections (accordion behavior)
+    document.querySelectorAll(".footer-section").forEach(sec => {
+      if (sec !== section) sec.classList.remove("active");
+    });
+
+    // Toggle current section
+    section.classList.toggle("active");
+  });
+});
 
 
 

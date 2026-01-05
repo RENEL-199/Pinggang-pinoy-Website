@@ -1,0 +1,296 @@
+/* ========================
+   FOOTER
+======================== */
+
+.footer-bg {
+  background: #1B3D2F;
+  padding: 20px 20px;
+}
+
+/* MAIN FOOTER LAYOUT */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  /* FIX: use px, not % */
+  flex-wrap: wrap;
+  /* FIX: allow wrapping */
+  color: #EAD9B7;
+  font-family: 'Poppins', 'Cormorant Garamond', serif;
+}
+
+/* EACH COLUMN */
+.footer-section {
+  display: block;
+  /* FIX: remove inner flex */
+  min-width: 180px;
+}
+
+/* LOGO */
+.footer-logo {
+  margin: 0;
+}
+
+.footer-logo-img {
+  width: 200px;
+  height: auto;
+}
+
+.footer-content a {
+  font-size: 20px;
+  color: #CBB48A;
+  margin: 0 15px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+/* TEXT */
+.text-1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 25px;
+  margin: 6px 0;
+  color: #fff;
+}
+
+.text:hover {
+  color: #EAD9B7;
+}
+
+.arrow {
+  display: none;
+}
+
+.footer-title {
+  display: none;
+}
+
+hr {
+  display: none;
+}
+
+.footer-content1 {
+  display: none
+}
+
+.footer-2 {
+  padding: 0px 20px 10px 20px;
+  background: #1B3D2F;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.icons-1 a {
+  font-size: 30px;
+  color: #CBB48A;
+  margin: 0 15px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.text2 a {
+  font-size: 25px;
+  color: #CBB48A;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.text3 {
+  font-size: 25px;
+  color: #CBB48A;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--nav-text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+@media (max-width: 480px) {
+  .footer-section {
+    width: 100%;
+    /* FULL WIDTH */
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+ .logo-img {
+  width: 90px;
+  height: auto;
+  display: block;
+}
+
+
+
+
+  .footer-title {
+    width: 100%;
+    /* ← ADD THIS */
+    background: none;
+    border: none;
+    color: #EAD9B7;
+    font-size: 15px;
+    font-family: 'Poppins', serif;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: space-between;
+    /* text left, arrow right */
+    align-items: center;
+  }
+
+
+  .footer-title .arrow {
+    color: #CBB48A;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+  }
+
+  .footer-links {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+
+  .footer-section.active .footer-links {
+    display: grid;
+    max-height: 500px;
+    /* adjust for taller content */
+    opacity: 1;
+    padding: 5px 0;
+    /* adds spacing when open */
+    justify-content: start;
+    text-align: left;
+  }
+
+  .footer-section.active .footer-title .arrow {
+    transform: rotate(180deg);
+  }
+
+  .footer-bg {
+    padding: 5px 10px;
+  }
+
+  .footer-links .text {
+    font-size: 16px;
+    margin: 6px 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: stretch;
+    gap: 1px;
+    box-sizing: border-box;
+  }
+
+
+  .footer-logo {
+    display: none;
+  }
+
+  .text-1 {
+    display: none;
+  }
+
+  .text:hover {
+    background-color: #2E5339;
+  }
+
+  hr {
+    display: block;
+  }
+
+
+  .footer-content1 {
+    display: flex;
+    align-items: center;
+    /* vertical alignment */
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 15px 0px 0px;
+    box-sizing: border-box;
+  }
+
+
+
+
+  .icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;        /* spacing between icons */
+}
+
+  
+
+  .icons a {
+  color: #CBB48A;
+  font-size: 34px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icons a:hover {
+  color: #ffffff;
+}
+
+
+  .icons-1 a {
+    display: none;
+  }
+
+  .text2 a {
+    font-size: 15px;
+    color: #CBB48A;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+
+  .text3 {
+    font-size: 15px;
+    color: #CBB48A;
+  }
+
+  .footer-2 {
+    padding: 10px;
+  }
+
+  .footer-content a{
+    font-size: 16px;
+  }
+
+}
